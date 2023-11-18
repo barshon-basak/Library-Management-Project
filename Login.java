@@ -26,21 +26,15 @@ public class Login {
     }
 
     public void LoginGUI() {
-        frame = new JFrame("Welcome to Library Management System");
-
-        // Set the frame size to fullscreen
-        GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-        int width = gd.getDisplayMode().getWidth();
-        int height = gd.getDisplayMode().getHeight();
-        frame.setBounds(0, 0, width, height);
-
+        frame = new JFrame("Library Management System");
+        frame.setBounds(100, 100, 450, 298);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
 
-        JLabel WelcomeToLibrary = new JLabel("Welcome To Library Management System");
+        JLabel WelcomeToLibrary = new JLabel("NSU Library Management System");
         WelcomeToLibrary.setHorizontalAlignment(SwingConstants.CENTER);
         WelcomeToLibrary.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-        WelcomeToLibrary.setBounds(20, 27, width - 40, 29);
+        WelcomeToLibrary.setBounds(20, 27, 397, 29);
         frame.getContentPane().add(WelcomeToLibrary);
 
         JButton Librarian = new JButton("Librarian");
@@ -51,13 +45,13 @@ public class Login {
             }
         });
         Librarian.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
-        Librarian.setBounds(width / 4, height / 4, width / 2, 29);
+        Librarian.setBounds(116, 112, 198, 29);
         frame.getContentPane().add(Librarian);
 
         JLabel LoginPage = new JLabel("Login Page");
         LoginPage.setHorizontalAlignment(SwingConstants.CENTER);
         LoginPage.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
-        LoginPage.setBounds(width / 3, height / 6, width / 3, 29);
+        LoginPage.setBounds(149, 65, 144, 29);
         frame.getContentPane().add(LoginPage);
 
         JButton RegisteredUser = new JButton("Registered User");
@@ -69,7 +63,15 @@ public class Login {
             }
         });
         RegisteredUser.setFont(new Font("Comic Sans MS", Font.BOLD, 15));
-        RegisteredUser.setBounds(width / 4, height / 2, width / 2, 29);
+        RegisteredUser.setBounds(116, 152, 198, 29);
         frame.getContentPane().add(RegisteredUser);
+
+        
+        JLabel madeByBBLabel = new JLabel("Made by Barshon ,Tanveer & Tonmoy.");
+        madeByBBLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 11));
+        madeByBBLabel.setHorizontalAlignment(SwingConstants.LEFT);
+        madeByBBLabel.setBounds(225, 225, 250, 20);
+        madeByBBLabel.setForeground(Color.BLACK);
+        frame.getContentPane().add(madeByBBLabel);
     }
 }
